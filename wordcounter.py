@@ -2,26 +2,29 @@
 
 from collections import defaultdict
 
-with open("WordsToCount.txt") as fileWordsToCount:
+DIR_PATH = "./FilesToProcess/"
+WORDS_SEPARATORS_FILE = "WordsSeparators.txt"
+WORDS_TO_COUNT_FILE = "WordsToCount.txt"
+WORDS_TO_IGNORE_FILE = "WordsToIgnore.txt"
+
+with open(DIR_PATH + WORDS_SEPARATORS_FILE) as fileWordsSeparators:
+    wordsSeparators = fileWordsSeparators.read()
+with open(DIR_PATH + WORDS_TO_COUNT_FILE) as fileWordsToCount:
     wordsToCount = fileWordsToCount.readlines()
-with open("WordsToIgnore.txt") as fileWordsToIgnore:
-    wordsToIgnore = fileWordsToIgnore.read()
+with open(DIR_PATH + WORDS_TO_IGNORE_FILE) as fileWordsToIgnore:
+    wordsToIgnore = fileWordsToIgnore.read().split("\n")
 
 wordDict = defaultdict(int)
-wordsToIgnore = wordsToIgnore.split("\n")
+SPACE = " "
 
 for line in wordsToCount:
-    line = line.replace(",", " ")
-    line = line.replace("/", " ")
-    line = line.replace(":", " ")
-    line = line.replace("(", " ")
-    line = line.replace(")", " ")
+    for separator in wordsSeparators:
+        line = line.replace(separator, SPACE)
+
     for split in line.split():
-        if split.lower() in wordsToIgnore:
-            continue
+        if split.casefold() not in wordsToIgnore:
+            wordDict[split.casefold()] += 1
 
-        wordDict[split.lower()] += 1
-
-print("\n".join( \
-        [" : ".join(map(str, item)) for item in sorted( \
+print("\n".join(\
+        [" : ".join(map(str, item)) for item in sorted(\
             wordDict.items(), key = lambda x : x[1], reverse = True)]))
