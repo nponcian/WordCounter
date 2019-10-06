@@ -27,6 +27,6 @@ Linux
 Company-C
 
 Requirements:
-C++, Python
+Python, C++
 TCP/IP
 Linux

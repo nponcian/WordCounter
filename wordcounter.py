@@ -20,7 +20,7 @@ for line in wordsToCount:
         if split.lower() in wordsToIgnore:
             continue
 
-        wordDict[split] += 1
+        wordDict[split.lower()] += 1
 
 print("\n".join( \
         [" : ".join(map(str, item)) for item in sorted( \
