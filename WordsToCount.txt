@@ -1,7 +1,7 @@
-Company A
+Company-A
 
 Requirements:
-C, C++, Java
+C, C++, Java, Python
 analytic / trouble-shooting and debugging skills
 TCP, UDP, IP, HTTP, L4-L7, DNS, SSL, tunneling, SIP, Diameter
 Linux and OS internals
@@ -9,15 +9,24 @@ leadership
 
 
 
-Company B
+Company-B
 
 Requirements:
 Percona XtraDB Cluster, Elasticsearch, Cassandra
 Hazelcast
 Kafka
 AngularJS, React
-C++, Golang
+C++, Golang, Python
 Android SDK, React Native
 Kubernetes (Docker)
 TCP/IP, HTTP
+Linux
+
+
+
+Company-C
+
+Requirements:
+C++, Python
+TCP/IP
 Linux
