@@ -21,9 +21,10 @@ for line in wordsToCount:
     for separator in wordsSeparators:
         line = line.replace(separator, SPACE)
 
-    for split in line.split():
-        if split.casefold() not in wordsToIgnore:
-            wordDict[split.casefold()] += 1
+    for currentWord in line.split():
+        currentWordLower = currentWord.casefold()
+        if currentWordLower not in wordsToIgnore:
+            wordDict[currentWordLower] += 1
 
 print("\n".join(\
         [" : ".join(map(str, item)) for item in sorted(\
