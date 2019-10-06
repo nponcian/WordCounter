@@ -3,18 +3,18 @@
 from collections import defaultdict
 
 DIR_PATH = "./FilesToProcess/"
-INPUT_FILE = "Input.txt"
-WORDS_SEPARATORS_FILE = "WordsSeparators.txt"
-WORDS_TO_COUNT_FILE = "WordsToCount.txt"
-WORDS_TO_IGNORE_FILE = "WordsToIgnore.txt"
+INPUT_FILE = DIR_PATH + "Input.txt"
+WORDS_SEPARATORS_FILE = DIR_PATH + "WordsSeparators.txt"
+WORDS_TO_COUNT_FILE = DIR_PATH + "WordsToCount.txt"
+WORDS_TO_IGNORE_FILE = DIR_PATH + "WordsToIgnore.txt"
 
-with open(DIR_PATH + INPUT_FILE) as fileInput:
+with open(INPUT_FILE) as fileInput:
     inputLines = fileInput.readlines()
-with open(DIR_PATH + WORDS_SEPARATORS_FILE) as fileWordsSeparators:
+with open(WORDS_SEPARATORS_FILE) as fileWordsSeparators:
     wordsSeparators = fileWordsSeparators.read()
-with open(DIR_PATH + WORDS_TO_COUNT_FILE) as fileWordsToCount:
+with open(WORDS_TO_COUNT_FILE) as fileWordsToCount:
     wordsToCount = list(filter(None, fileWordsToCount.read().split("\n")))
-with open(DIR_PATH + WORDS_TO_IGNORE_FILE) as fileWordsToIgnore:
+with open(WORDS_TO_IGNORE_FILE) as fileWordsToIgnore:
     wordsToIgnore = list(filter(None, fileWordsToIgnore.read().split("\n")))
 
 wordDict = defaultdict(int)
