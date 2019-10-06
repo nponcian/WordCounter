@@ -4,7 +4,7 @@
 Counts the number of occurrences of words within a file. If you're curious on what is the most used word in the essay that you've written, or maybe you are validating that a message doesn't contain some specific words, or you're trying to check the unique words present in a context, or perhaps you're job hunting and badly needs to know the requirements that mostly appear in job openings, then this application would help!
 
 ## REQUIREMENTS
-1. Git
+1. Git (optional if you just prefer to do a download and extract from GitHub)
     ~~~
     sudo apt install git
     ~~~
