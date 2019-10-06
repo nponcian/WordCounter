@@ -1,5 +1,34 @@
 # WordCounter
 
+## PURPOSE
+Counts the number of occurrences of words within a file. If you're curious on what is the most used word in the essay that you have written, or maybe you are validating that a message doesn't contain some specific words, or you're trying to check the unique words present in a context, or perhaps you are job hunting and badly needs to know what requirement appears the most in multiple employers, then this application would help!
+
+## REQUIREMENTS
+1. Git
+    ~~~
+    sudo apt install git
+    ~~~
+2. GNU Toolchain (or just Python)
+    ~~~
+    sudo apt install build-essential
+    ~~~
+
+## RUNNING
+1. Clone repo
+    ```
+    git clone https://github.com/nponcian/WordCounter.git
+    cd WordCounter
+    ```
+2. Modify files in ./FilesToProcess directory
+    a. ./FilesToProcess/Input.txt - the input file to count the number of occurrences of words
+    b. ./FilesToProcess/WordsSeparators.txt - non-space separators that separates words in input file such as comma, slash, etc.
+    c. ./FilesToProcess/WordsToCount.txt - if not empty, only the words here would be counted, otherwise all words are counted
+    d. ./FilesToProcess/WordsToIgnore.txt - the words here would not be counted
+3. Invoke script
+    ```
+    python3 wordcounter.py
+    ```
+
 ## SAMPLE RUN
 ```
 nponcian@nponcian-VirtualBox-Ubuntu:~/Documents/Scripts/WordCounter$ echo "" | cat FilesToProcess/WordsSeparators.txt -
