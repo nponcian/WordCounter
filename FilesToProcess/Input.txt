@@ -19,7 +19,7 @@ AngularJS, React
 C++, Golang, Python
 Android SDK, React Native
 Kubernetes (Docker)
-TCP/IP, HTTP
+Tcp/Ip, http
 Linux
 
 
@@ -27,6 +27,6 @@ Linux
 Company-C
 
 Requirements:
-Python, C++
-TCP/IP
+Python, c++
+TCP /IP
 Linux
