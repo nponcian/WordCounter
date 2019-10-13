@@ -89,6 +89,9 @@ directx
 opengl
 opencl
 opencv
+unreal
+unity
+qt
 vision
 gpu
 pcl
