@@ -11,3 +11,44 @@ operating system
 virtual machine
 web framework
 web security
+
+kernel programming
+system programming
+os programming
+linux programming
+backend development
+backend developer
+web development
+web developer
+cloud computing
+network programming
+network protocol
+network security
+game development
+gaming development
+real-time os
+realtime os
+realtime system
+amazon web services
+robot os
+robot operating system
+node.js
+gnu toolchain
+build system
+
+gnu-linux
+gnulinux
+database
+databases
+cmake
+makefile
+multithread
+multithreading
+multi-thread
+multi-threading
+concurrency
+realtime
+qt
+gui
+console
+compiler toolchain
